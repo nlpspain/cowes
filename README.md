@@ -51,4 +51,10 @@ un archivo de textos de todos los artículos.
 
 El archivo generado toma el nombre de "eswiki-latest-pages-articles.txt" que es el corpus final.
 
+## Descargar Corpus
+
+El [corpus está subido en kaggle](https://www.kaggle.com/jmorenobl/corpus-de-la-wikipedia-en-espaol) y se puede previsualizar desde dicha plataforma:
+
+* [Descargar CoWEs](https://www.kaggle.com/jmorenobl/corpus-de-la-wikipedia-en-espaol/download)
+
 Lo siguiente es usarlo por ejemplo para crear un [Tokenizador de HuggingFace](https://huggingface.co/docs/tokenizers/python/latest/quicktour.html)
