@@ -6,6 +6,9 @@ Está inspirado y toma los scripts del siguiente artículo:
 
 https://towardsdatascience.com/pre-processing-a-wikipedia-dump-for-nlp-model-training-a-write-up-3b9176fdf67
 
+La extracción del texto la realiza la fantástica herramienta creada por [
+Giuseppe Attardi](https://github.com/attardi) conocida como [WikiExtractor](https://github.com/attardi/wikiextractor).
+
 ## Requisitos
 
 * **Python 3.5** - No vale otra versión.
