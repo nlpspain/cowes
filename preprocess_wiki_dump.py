@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import sys
+import unicodedata
 from pathlib import Path
 
 from blingfire import text_to_sentences
@@ -17,8 +18,11 @@ def main():
     with open(wiki_dump_file_out, 'w', encoding='utf-8') as out_f:
         with open(str(wiki_dump_file_in), 'r', encoding='utf-8') as in_f:
             for line in in_f:
-                sentences = text_to_sentences(line)
-                out_f.write(sentences + '\n')
+                line = line.strip()
+                if line != "":
+                    sentences = text_to_sentences(line)
+                    sentences = unicodedata.normalize("NFKC", sentences)
+                    out_f.write(sentences + '\n')
     print('Successfully pre-processed {} to {}...'.format(wiki_dump_file_in, wiki_dump_file_out))
 
 
