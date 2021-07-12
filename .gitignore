@@ -134,3 +134,6 @@ dmypy.json
 *.tpl
 eswiki-latest-pages-articles.txt
 eswiki-latest-pages-articles_preprocessed.txt
+
+# Trained corpus
+models/
