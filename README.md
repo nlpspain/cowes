@@ -60,11 +60,11 @@ El [corpus está subido en kaggle](https://www.kaggle.com/jmorenobl/corpus-de-la
 
 * [Descargar CoWEs](https://www.kaggle.com/jmorenobl/corpus-de-la-wikipedia-en-espaol/download)
 
-Lo siguiente es usarlo por ejemplo para crear un [Tokenizador de HuggingFace](https://huggingface.co/docs/tokenizers/python/latest/quicktour.html)
+Lo siguiente es usarlo, por ejemplo, para crear un [Tokenizador de HuggingFace](https://huggingface.co/docs/tokenizers/python/latest/quicktour.html).
 
 ## (Opcional) Últimos retoques
 
-Es posible que el corpus en *bruto* no sea suficiente para empezar a trabajar con él, por ejemplo, para entrenar un word embedding. Si es tu caso, las acciones que se ejecutan en este paso son las siguientes:
+Es posible que el corpus en *bruto* no sea suficiente para empezar a trabajar con él, por ejemplo, para entrenar un word embedding con FastText. Si es tu caso, las acciones que se ejecutan en este paso son las siguientes:
 
 * Se eliminan líneas en blanco.
 * A cada línea se le asigna una única oración. Es decir, se dividen los párrafos en varias oraciones.
