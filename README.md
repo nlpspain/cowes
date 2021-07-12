@@ -62,21 +62,27 @@ El [corpus está subido en kaggle](https://www.kaggle.com/jmorenobl/corpus-de-la
 
 Lo siguiente es usarlo por ejemplo para crear un [Tokenizador de HuggingFace](https://huggingface.co/docs/tokenizers/python/latest/quicktour.html)
 
-## Dividir el Corpus en frases
+## (Opcional) Últimos retoques
 
-Si necesitas transformar el corpus en frases por línea puedes preprocesarlo usando el siguiente comando:
+Es posible que el corpus en *bruto* no sea suficiente para empezar a trabajar con él, por ejemplo, para entrenar un word embedding. Si es tu caso, las acciones que se ejecutan en este paso son las siguientes:
+
+* Se eliminan líneas en blanco.
+* A cada línea se le asigna una única oración. Es decir, se dividen los párrafos en varias oraciones.
+* Se normalizan los caracteres unicode usando "NFKC".
+
+El comando se ejecuta de la siguiente manera:
 
 ```bash
 (cowes)$ ./preprocess_wiki_dump.py eswiki-latest-pages-articles.txt
 ```
 
-Este comando transforma el siguiente texto:
+Un ejemplo del resultado de la ejecución del comando es la transformación del siguiente texto:
 
 >Andorra, oficialmente Principado de Andorra, es un micro-Estado soberano del suroeste de Europa, ubicado entre España y Francia, en el límite de la península ibérica. Se constituye en Estado independiente, de derecho, democrático y social, cuya forma de gobierno es el coprincipado parlamentario. Su territorio está organizado en siete parroquias, con una población total de 76 177 habitantes. Su capital es Andorra la Vieja.
 
 en este:
 
->Andorra, oficialmente Principado de Andorra ( ), es un micro-Estado soberano del suroeste de Europa, ubicado entre España y Francia, en el límite de la península ibérica.<br/>
+>Andorra, oficialmente Principado de Andorra, es un micro-Estado soberano del suroeste de Europa, ubicado entre España y Francia, en el límite de la península ibérica.<br/>
 >Se constituye en Estado independiente, de derecho, democrático y social, cuya forma de gobierno es el coprincipado parlamentario.<br/>
 >Su territorio está organizado en siete parroquias, con una población total de 76 177 habitantes.<br/>
 >Su capital es Andorra la Vieja."
