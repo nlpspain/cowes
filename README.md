@@ -85,4 +85,4 @@ en este:
 >Andorra, oficialmente Principado de Andorra, es un micro-Estado soberano del suroeste de Europa, ubicado entre España y Francia, en el límite de la península ibérica.<br/>
 >Se constituye en Estado independiente, de derecho, democrático y social, cuya forma de gobierno es el coprincipado parlamentario.<br/>
 >Su territorio está organizado en siete parroquias, con una población total de 76 177 habitantes.<br/>
->Su capital es Andorra la Vieja."
+>Su capital es Andorra la Vieja.
