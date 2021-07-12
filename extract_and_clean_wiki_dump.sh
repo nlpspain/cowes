@@ -12,5 +12,6 @@ python -m wikiextractor.WikiExtractor  $WIKI_DUMP_FILE_IN --templates $WIKI_TEMP
 | grep -v "</doc>\$" \
 | sed "s/<.*>//g" \
 | sed "/^\s*\$/d" \
+| sed -r "s/\( *\)//g" \
 > $WIKI_DUMP_FILE_OUT
 echo "Succesfully extracted and cleaned $WIKI_DUMP_FILE_IN to $WIKI_DUMP_FILE_OUT"
